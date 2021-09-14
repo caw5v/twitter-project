@@ -1,0 +1,49 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?2749765f02b6507f62025c5d2339482f") format("truetype"),
+url("./flaticon.woff?2749765f02b6507f62025c5d2339482f") format("woff"),
+url("./flaticon.woff2?2749765f02b6507f62025c5d2339482f") format("woff2"),
+url("./flaticon.eot?2749765f02b6507f62025c5d2339482f#iefix") format("embedded-opentype"),
+url("./flaticon.svg?2749765f02b6507f62025c5d2339482f#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "heart": "\f101",
+    "verify": "\f102",
+    "speech-bubble": "\f103",
+    "refreshing": "\f104",
+    "upload": "\f105",
+    "calendar": "\f106",
+);
+
+.flaticon-heart:before {
+    content: map-get($flaticon-map, "heart");
+}
+.flaticon-verify:before {
+    content: map-get($flaticon-map, "verify");
+}
+.flaticon-speech-bubble:before {
+    content: map-get($flaticon-map, "speech-bubble");
+}
+.flaticon-refreshing:before {
+    content: map-get($flaticon-map, "refreshing");
+}
+.flaticon-upload:before {
+    content: map-get($flaticon-map, "upload");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
