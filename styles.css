@@ -708,3 +708,11 @@ experiment
   width: 100%;
   height: 285px;
 }
+
+.back-arrow:hover {
+  cursor: pointer;
+}
+
+.top-main-button {
+  position: absolute;
+}

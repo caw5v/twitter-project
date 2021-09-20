@@ -16,7 +16,7 @@ const userData = [
         tweet: `<iframe style='border-radius:20px'
             width="100%"
             height="285px"
-            src="https://www.youtube.com/embed/mhJRzQsLZGg"
+            src="https://www.youtube.com/embed/mhJRzQsLZGg?autoplay=1&mute=1"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -154,6 +154,10 @@ const userData = [
     },
     tweets: [
       {
+        tweet: `<iframe width="100%" height="285px" style='border-radius:20px' src="https://www.youtube.com/embed/JQT1KL9Tpz8?start=400&autoplay=1&mute=1&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+        timestamp: "2/10/2021 00:01:20",
+      },
+      {
         tweet: "https://pbs.twimg.com/media/E-CmD-5XoAUlCzd?format=jpg&name=medium",
         timestamp: "2/10/2021 00:01:20",
       },
@@ -203,7 +207,7 @@ const userData = [
     followingCount: 175,
     followerCount: 48200000,
     avatarURL: "https://pbs.twimg.com/profile_images/1321163587679784960/0ZxKlEKB_400x400.jpg",
-    coverPhotoURL: "https://pbs.twimg.com/profile_banners/11348282/1628090098/1500x500",
+    coverPhotoURL: "https://pbs.twimg.com/profile_banners/11348282/1631654628/1500x500",
     date() {
       return Date().split(" ")[1] + " " + Date().split(" ")[2];
     },
@@ -272,7 +276,7 @@ const userData = [
     },
     tweets: [
       {
-        tweet: `<iframe width="100%" height="285px" style='border-radius:20px' src="https://www.youtube.com/embed/j0z4FweCy4M?controls=0&amp;start=7528" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+        tweet: `<iframe width="100%" height="285px" style='border-radius:20px' src="https://www.youtube.com/embed/j0z4FweCy4M?controls=1&amp&mute=1&start=7529&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
         timestamp: "2/09/2021 18:37:12",
       },
       {
@@ -355,7 +359,3 @@ const news = [
     timestamp: "Live",
   },
 ];
-
-/* back button array */
-
-const back = [];
