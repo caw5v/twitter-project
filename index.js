@@ -6,6 +6,8 @@ const userData = [
     joinedDate: "June 2009",
     followingCount: 103,
     followerCount: "59.7M",
+    description: "",
+    website: "",
     avatarURL: "assets/elonmusk.jpg",
     coverPhotoURL: "assets/elonmusk-cover.jpeg",
     date() {
@@ -75,7 +77,9 @@ const userData = [
     displayName: "Bill Gates",
     joinedDate: "June 2009",
     followingCount: 274,
-    followerCount: 53800000,
+    followerCount: 53.8 + "M",
+    description: "Sharing things I'm learning through my foundation work and other interests.",
+    website: "🔗gatesnot.es/blog",
     avatarURL: "assets/billgates.jpg",
     coverPhotoURL: "assets/billgates-cover.jpeg",
     date() {
@@ -146,7 +150,9 @@ const userData = [
     displayName: "SpaceX",
     joinedDate: "April 2009",
     followingCount: 100,
-    followerCount: 17800000,
+    followerCount: 17.8 + "M",
+    description: "SpaceX designs, manufactures and launches the world’s most advanced rockets and spacecraft",
+    website: "🔗 spacex.com",
     avatarURL: "https://pbs.twimg.com/profile_images/1082744382585856001/rH_k3PtQ_400x400.jpg",
     coverPhotoURL: "https://pbs.twimg.com/profile_banners/34743251/1596331248/1500x500",
     date() {
@@ -205,7 +211,9 @@ const userData = [
     displayName: "NASA",
     joinedDate: "December 2007",
     followingCount: 175,
-    followerCount: 48200000,
+    followerCount: 48.2 + "M",
+    description: "There's space for everybody. ✨",
+    website: "🔗 nasa.gov",
     avatarURL: "https://pbs.twimg.com/profile_images/1321163587679784960/0ZxKlEKB_400x400.jpg",
     coverPhotoURL: "https://pbs.twimg.com/profile_banners/11348282/1631654628/1500x500",
     date() {
@@ -268,7 +276,9 @@ const userData = [
     displayName: "Tesla",
     joinedDate: "February 2008",
     followingCount: 78,
-    followerCount: 10800000,
+    followerCount: 10.8 + "M",
+    description: "electric cars, giant batteries and solar",
+    website: "🔗 tesla.com",
     avatarURL: "https://pbs.twimg.com/profile_images/1337607516008501250/6Ggc4S5n_400x400.png",
     coverPhotoURL: "https://pbs.twimg.com/profile_banners/13298072/1554236549/1500x500",
     date() {

@@ -167,6 +167,8 @@ header {
 
 .name-num-of-tweets-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
   z-index: 2;
   margin-left: 1em;
 }
@@ -181,6 +183,7 @@ header {
 
 .search {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: flex-start;
   padding: 0.3em 0 0 2em;
@@ -189,16 +192,21 @@ header {
 }
 
 .search > form > input {
+  position: relative;
+  z-index: 3;
   background: rgb(44, 44, 54);
   border-radius: 50px;
   width: 18vw;
-  padding: 1.1em 0 0.7em 1.5em;
+  padding: 1.1em 0 0.7em 4.5em;
   border: none;
   outline: none;
-  color: white;
+  color: rgb(240, 240, 240);
 }
 
 .search > form > input::placeholder {
+  position: absolute;
+  top: 15%;
+  left: 8%;
   color: rgba(195, 195, 195, 0.568);
   font-size: 1.2em;
 }
@@ -208,9 +216,46 @@ header {
   border: 1px solid rgb(29, 161, 242);
 }
 
-.name-num-of-tweets-container {
+.search-recommendation-container-visible {
+  position: absolute;
+  overflow-y: scroll;
+  z-index: 2;
+  min-height: 7em;
+  max-height: 46em;
+  width: 100%;
+  color: gray;
+  font-size: 0.9em;
+  background: black;
+  border: 0.5px solid rgba(128, 128, 128, 0.486);
+  border-radius: 20px;
+  top: 2.5em;
+
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.search-recommendation-container-visible::-webkit-scrollbar {
+  display: none;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.search-result:hover {
+  cursor: pointer;
+  background: rgb(32, 34, 39);
+}
+
+.search-result > a > button {
+  padding: 0.8em 1.5em;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
 }
 
 /*#######################################################
@@ -269,11 +314,17 @@ header {
 .dynamic-name-handle-date-container {
   display: flex;
   flex-direction: column;
+  gap: 1em;
   padding: 0 1em;
 }
 
+.user-name {
+  margin-top: -1em;
+}
+
 .dynamic-name-handle-date-container > p:nth-of-type(2) {
-  margin-top: 1em;
+  color: white;
+  font-weight: 400;
 }
 
 .dynamic-following-followers-container {
@@ -281,6 +332,18 @@ header {
   padding: 0.5em 1em;
   gap: 1em;
   margin-bottom: 0.5em;
+}
+
+.account-info-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+.account-info-container > a {
+  text-decoration: none;
+  color: rgb(29, 161, 242);
 }
 
 .follow-spans {
@@ -331,6 +394,7 @@ header {
 /* tweet content */
 
 .dynamic-tweet-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100.5%;
@@ -521,7 +585,6 @@ i {
 .you-might-like-container {
   display: flex;
   position: relative;
-  overflow-y: hidden;
   flex-direction: column;
   border-radius: 20px;
   width: 92%;
@@ -591,6 +654,8 @@ i {
   bottom: 0;
   width: 100%;
   background: rgb(30, 30, 36);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .you-might-like-container > div:nth-of-type(2):hover {
@@ -713,6 +778,82 @@ experiment
   cursor: pointer;
 }
 
-.top-main-button {
+.header-main-button-visible {
   position: absolute;
+  visibility: visible;
+  right: 1.2em;
+  padding: 0.8em 1.6em;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+}
+
+.header-main-button-hidden {
+  position: absolute;
+  visibility: hidden;
+  right: 1.2em;
+  padding: 0.8em 1.6em;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+}
+
+.tweet-popup {
+  position: relative;
+}
+
+.tweet-popup-in {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  visibility: visible;
+  z-index: 1000;
+
+  margin-left: -7.3em;
+  margin-bottom: -14em;
+  width: 19em;
+  padding: 1em;
+  border: 1px solid rgba(128, 128, 128, 0.486);
+  background: black;
+  border-radius: 20px;
+  opacity: 100%;
+
+  transition: all 0.1s cubic-bezier(0.94, 0.06, 0.94, 0.06);
+}
+
+.tweet-popup-in > div > img {
+  width: 18%;
+}
+
+.follower-following {
+  display: flex;
+  gap: 1em;
+}
+
+.tweet-popup-out {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  visibility: hidden;
+  z-index: -1;
+
+  margin-left: -7.3em;
+  margin-bottom: -14em;
+  width: 19em;
+  padding: 1em;
+  border: 1px solid rgba(128, 128, 128, 0.486);
+  background: black;
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 0.1s cubic-bezier(0.94, 0.06, 0.94, 0.06);
+}
+
+.tweet-popup-out > div > img {
+  width: 18%;
+}
+
+.tweet-userAvatar:hover {
+  cursor: pointer;
 }
